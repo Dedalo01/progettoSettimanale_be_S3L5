@@ -1,0 +1,37 @@
+﻿body {
+    background-color: #d2e2e5e5;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+nav {
+    color:antiquewhite;
+    background: rgb(71,156,150);
+    background: linear-gradient(180deg, rgba(71,156,150,1) 29%, rgba(122,182,179,1) 55%, rgba(214,228,231,1) 86%);
+}
+
+nav li {
+    color: antiquewhite;
+}
+
+.card {
+    transition: all 0.4s;
+}
+
+.card:hover {
+    -webkit-box-shadow: 5px 8px 7px 3px rgba(54,54,54,0.34);
+    box-shadow: 5px 8px 7px 3px rgba(54,54,54,0.34);
+}
+
+footer {
+    margin-top: auto;
+    background: rgb(155,199,198);
+    background: linear-gradient(180deg, rgba(155,199,198,1) 12%, rgba(135,189,187,1) 30%, rgba(112,177,173,1) 50%, rgba(71,156,150,1) 69%);
+}
+
+footer p {
+    color: white;
+}
+

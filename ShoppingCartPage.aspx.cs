@@ -29,6 +29,11 @@ namespace progettoSettimanaleS3L5
 
         private void BindCartRepeater()
         {
+            if (GaeShopData.ShoppingCart.Count == 0)
+            {
+                isEmpty.Visible = true;
+            }
+
             // Assegna la lista come origine dati per il Repeater
             CartRepeater.DataSource = GaeShopData.ShoppingCart;
             CartRepeater.DataBind();
@@ -38,7 +43,7 @@ namespace progettoSettimanaleS3L5
         {
             if (e.CommandName == "RemoveFromCart")
             {
-                // Esempio di come gestire la rimozione di un articolo dal carrello
+
                 int productId = Convert.ToInt32(e.CommandArgument);
 
                 // Rimuovi l'articolo dal carrello
@@ -56,6 +61,12 @@ namespace progettoSettimanaleS3L5
             {
                 GaeShopData.ShoppingCart.Remove(itemToRemove);
             }
+        }
+
+        protected void EmptyCartBtn_Click(object sender, EventArgs e)
+        {
+            GaeShopData.ShoppingCart.Clear();
+            BindCartRepeater();
         }
     }
 }
